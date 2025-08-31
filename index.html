@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Epistemicon 2K25</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Icons & Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="style1.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="eventLogo">
+            <img src="event_logo1.png" alt="Epistemicon logo" />
+            <a href="#home" class="logo">EPISTEMICON – 2K25</a>
+
+        </div>
+
+        <div id="menu-bar" role="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </div>
+
+        <nav id="site-nav" class="navbar" aria-label="Primary">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#vendor">Key Events</a>
+            <a href="#vendor">Galery</a>
+            <a href="#contact">Register</a>
+        </nav>
+    </header>
+
+
+    <!-- Hero -->
+    <section id="home" class="home container">
+        <div class="content">
+            <video src="Logo video1.mp4" autoplay muted loop playsinline poster="banner-poster.jpg"
+                style="border: none;" id="myVideo"></video>
+            <div class="ticker" aria-label="Event ticker"><span> your stage, your story, your innovation — this is
+                    Epistemicon! • your stage, your story, your innovation — this is Epistemicon! • </span></div>
+            <!-- <a href="#key events" class="btn">Details</a> <br> <br> -->
+            <a href="#contact" class="btn">Register</a>
+        </div>
+    </section>
+
+    <!-- Countdown -->
+    <section class="countdown-section container" aria-labelledby="countdown-title">
+        <h1 id="countdown-title">⏳ Countdown to Epistemicon 2K25 🎉</h1>
+        <div class="countdown-grid" aria-live="polite" aria-atomic="true">
+            <div class="time-box">
+                <h2 id="days">00</h2>
+                <p>Days</p>
+            </div>
+            <div class="time-box">
+                <h2 id="hours">00</h2>
+                <p>Hours</p>
+            </div>
+            <div class="time-box">
+                <h2 id="minutes">00</h2>
+                <p>Minutes</p>
+            </div>
+            <div class="time-box">
+                <h2 id="seconds">00</h2>
+                <p>Seconds</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h1>About Epistemicon</h1>
+        <div>
+            <p>Epistemicon is an exciting inter-collegiate event that celebrates innovation, creativity, and talent.
+                Organized by, Andhra Loyola Institute of Engineering and Technology this event offers a platform for
+                students from various colleges to come together, participate in a wide range of competitions, and
+                showcase their skills across multiple domains. Whether you're passionate about technology, arts,
+                literature, or science, Epistemicon has something for everyone.</p>
+        </div>
+    </section>
+
+
+
+    <!-- Steps -->
+    <h1>Key Events</h1>
+    <section class="step-container" aria-label="Event Schedule" id="key events">
+
+        <article class="step">
+            <span>01</span>
+            <h3>Project Expo</h3>
+            <p>20/08/2025, Saturday, 10:00 am.</p>
+            <a href="#" class="btn secondary">Learn more</a>
+        </article>
+
+        <article class="step">
+            <span>02</span>
+            <h3>Paper Presentation</h3>
+            <p>20/08/2025, Saturday, 1:00 pm.</p>
+            <a href="#" class="btn secondary">Learn more</a>
+        </article>
+
+        <article class="step">
+            <span>03</span>
+            <h3>Poster Presentation</h3>
+            <p>20/08/2025, Saturday, 2:00 pm.</p>
+            <a href="#" class="btn secondary">Learn more</a>
+        </article>
+    </section>
+
+
+    <h1>Gallery</h1>
+    <div id="eventCarousel" class="carousel_slide" data-bs-ride="carousel">
+
+        
+
+        <!-- Carousel inner -->
+        <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="image1.jpg" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="image1.jpg" class="d-block w-100" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="image1.jpg" class="d-block w-100" alt="Slide 3">
+                </div>
+            </div>
+
+            <!-- Navigation buttons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <!-- Indicators (dots) -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="2"></button>
+        </div>
+        </div>
+    </div>
+
+
+
+        <!-- Location -->
+        <section class="location" id="location">
+            <div class="heading">
+                <h1>Location</h1>
+            </div>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.3466807259415!2d80.65604947460868!3d16.508586527527395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35fcc97636aaa9%3A0xa173d94ed4a34bc9!2sAndhra%20Loyola%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1756637906884!5m2!1sen!2sin"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="location-details">
+                <p>The event venue is located at:</p>
+                <p>GM55+CCQ, ITI Rd, Beside Ramesh Hospital, Jayaprakash Nagar, Vijayawada, Andhra Pradesh 520008</p>
+                <p>Please refer to the map above for directions and location details.</p>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact" id="contact">
+            <div class="heading">
+                <h1>Registration</h1>
+            </div>
+            <form action="contact_form.php" method="post" class="contact-form" novalidate>
+                <div class="inputRow">
+                    <input type="text" name="name" placeholder="Your name" autocomplete="name" required>
+                    <input type="email" name="email" placeholder="Your email" autocomplete="email" required>
+                </div>
+                
+                <div class="inputRow">
+                    <input type="number" name="phone" placeholder="Your number" autocomplete="tel">
+                    <input type="text" name="college" placeholder="Your college" autocomplete="college">
+                </div>
+                <div class="inputRow">
+                <select name="event" id="eventdd">
+                    <option value="Project Expo">--Select Event you want to participate--</option>
+                    <option value="Project Expo">Project Expo</option>
+                    <option value="Paper Presentation">Paper Presentation</option>
+                    <option value="Poster Presentation">Poster Presentation</option>
+                    <option value="Technical Quiz">Technical Quiz</option>
+                </select>
+                </div>
+                <button class="btn" type="submit">Register</button>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer"> &copy; <span>Epistemicon</span> | all rights reserved!</footer>
+
+        <script>
+            // ----------------------------
+            // Mobile nav
+            // ----------------------------
+            const menuBtn = document.getElementById('menu-bar');
+            const nav = document.getElementById('site-nav');
+            menuBtn?.addEventListener('click', () => {
+                const open = menuBtn.getAttribute('aria-expanded') === 'true';
+                menuBtn.setAttribute('aria-expanded', String(!open));
+                nav.classList.toggle('open');
+            });
+            // close menu on scroll or link click (mobile)
+            window.addEventListener('scroll', () => { nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); });
+            nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+                nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false');
+            }));
+
+            // ----------------------------
+            // Countdown (with zero-padding & accessibility)
+            // ----------------------------
+            const $d = document.getElementById('days');
+            const $h = document.getElementById('hours');
+            const $m = document.getElementById('minutes');
+            const $s = document.getElementById('seconds');
+
+            const eventDate = new Date('September 20, 2025 00:00:00').getTime();
+
+            function pad(n) { return String(n).padStart(2, '0'); }
+
+            const timer = setInterval(() => {
+                const now = Date.now();
+                const distance = eventDate - now;
+                if (distance <= 0) {
+                    document.querySelector('.countdown-section').innerHTML = '<h2 style="text-align:center">🎉 Epistemicon 2K25 Has Begun! 🎉</h2>';
+                    clearInterval(timer);
+                    return;
+                }
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                $d.textContent = pad(days);
+                $h.textContent = pad(hours);
+                $m.textContent = pad(minutes);
+                $s.textContent = pad(seconds);
+            }, 1000);
+
+            // document.getElementById("myVideo").defaultPlaybackRate = 2.0;
+        </script>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
