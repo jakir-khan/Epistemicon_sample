@@ -184,6 +184,7 @@
        COUNTDOWN
        ------------------------------ */
         .countdown-section {
+            width: 80vw;
             padding: var(--space-5) var(--space-4) var(--space-4)
         }
 
@@ -194,9 +195,11 @@
         }
 
         .countdown-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px
+            /* width: 80vw; */
+            display: flex;
+            /* grid-template-columns: repeat(4, 1fr);
+            gap: 10px */
+            justify-content: center;
         }
 
         .time-box {
@@ -273,6 +276,20 @@
             }
         }
 
+
+        /* video screen */
+
+        #promo-video {
+       background: #f8f9fa;
+       padding: 40px 0;
+       border-top: 3px solid #007bff;
+        }
+    #promo-video h2 {
+      color: #007bff;
+      font-weight: 600;
+    }
+
+
         /* ------------------------------
        STEPS
        ------------------------------ */
@@ -317,14 +334,173 @@
             border: none;
         }
 
+        /* Popup card container */
+.popup-card {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+/* Show popup */
+.popup-card.active {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Popup content box */
+.popup-content {
+  background: white;
+  color: #333;
+  padding: 25px 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  position: relative;
+  transform: translateY(-50px);
+  animation: popupSlideIn 0.4s forwards;
+}
+
+/* Slide in animation */
+@keyframes popupSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Close button */
+.close-popup {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-popup:hover {
+  color: #ff5722;
+}
+
+/* Scroll inside popup if content is large */
+.popup-content p, .popup-content ul {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Optional: make lists spaced nicely */
+.popup-content ul {
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
         /* ------------------------------
        Gallery
        ------------------------------ */
-        .carousel_slide {
-            height: 60%;
-            width: 60%;
-            overflow: auto;
-        }
+/* GALLERY SECTION */
+#gallery {
+  padding: 50px 20px;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #222;
+  font-family: 'Roboto', sans-serif;
+}
+
+.horizontal-gallery {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px 20px;
+  scroll-behavior: smooth;
+}
+
+.horizontal-gallery img {
+  height: 200px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.horizontal-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* LIGHTBOX STYLING */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.lightbox-overlay.active {
+  display: flex;
+}
+
+.lightbox-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 10000;
+  transition: color 0.2s;
+}
+
+.close-lightbox:hover {
+  color: #ff4444;
+}
 
         /* ------------------------------
        TEAM (Photographer)
@@ -486,18 +662,128 @@
        FOOTER
        ------------------------------ */
         .footer {
-            width: 100vw;
+            width: 95vw;
             background: var(--color-primary);
             color: #fff;
             text-align: center;
             padding: 16px;
-            font-weight: 600
+            border-top-left-radius: 8px;
+            border-top-right-radius: 20px;
+            font-weight: 600;
         }
 
         .footer span {
             color: #fff;
             text-decoration: underline
         }
+        /* Footer Base */
+
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Logo */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  width: 50px;
+  height: 50px;
+  animation: rotateLogo 5s linear infinite;
+}
+
+.footer-logo h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Social Icons */
+.footer-social {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.footer-social a {
+  color: #f0f0f0;
+  font-size: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #ff9800;
+  transform: scale(1.2);
+}
+
+/* Info Text */
+.footer-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotateLogo {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-logo,
+  .footer-social,
+  .footer-info {
+    justify-content: center;
+  }
+
+  .footer-logo img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .footer-social a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-info p {
+    font-size: 12px;
+  }
+
+  .footer-logo h2 {
+    font-size: 20px;
+  }
+}
 
         /* ------------------------------
        MEDIA QUERIES (tablet & up)

@@ -33,8 +33,8 @@
         <nav id="site-nav" class="navbar" aria-label="Primary">
             <a href="#home">Home</a>
             <a href="#about">About</a>
-            <a href="#vendor">Key Events</a>
-            <a href="#vendor">Galery</a>
+            <a href="#key-events">Key Events</a>
+            <a href="#gallery">Gallery</a>
             <a href="#contact">Register</a>
         </nav>
     </header>
@@ -51,6 +51,21 @@
             <a href="#contact" class="btn">Register</a>
         </div>
     </section>
+
+    <!-- video screen -->
+
+    <section id="promo-video" class="container my-5">
+  <h2 class="text-center mb-4">🎬 Epistemicon 2K25 – Promo Video</h2>
+  <div class="ratio ratio-16x9">
+    <video id="eventVideo" muted preload="metadata" controls poster="banner-poster.jpg">
+      <source src="epistemicon-2k25.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+
+
 
     <!-- Countdown -->
     <section class="countdown-section container" aria-labelledby="countdown-title">
@@ -86,71 +101,137 @@
         </div>
     </section>
 
-
-
     <!-- Steps -->
     <h1>Key Events</h1>
-    <section class="step-container" aria-label="Event Schedule" id="key events">
+    <section class="step-container" aria-label="Event Schedule" id="key-events">
 
-        <article class="step">
-            <span>01</span>
-            <h3>Project Expo</h3>
-            <p>20/08/2025, Saturday, 10:00 am.</p>
-            <a href="#" class="btn secondary">Learn more</a>
-        </article>
+    <article class="step" data-event="expo">
+        <span>01</span>
+        <h3>Project Expo</h3>
+        <p>20/08/2025, Saturday, 10:00 am.</p>
+        <a href="#" class="btn secondary learn-more">Learn more</a>
+    </article>
 
-        <article class="step">
-            <span>02</span>
-            <h3>Paper Presentation</h3>
-            <p>20/08/2025, Saturday, 1:00 pm.</p>
-            <a href="#" class="btn secondary">Learn more</a>
-        </article>
-
-        <article class="step">
-            <span>03</span>
-            <h3>Poster Presentation</h3>
-            <p>20/08/2025, Saturday, 2:00 pm.</p>
-            <a href="#" class="btn secondary">Learn more</a>
-        </article>
-    </section>
-
-
-    <h1>Gallery</h1>
-    <div id="eventCarousel" class="carousel_slide" data-bs-ride="carousel">
-
-        
-
-        <!-- Carousel inner -->
-        <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="image1.jpg" class="d-block w-100" alt="Slide 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="image1.jpg" class="d-block w-100" alt="Slide 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="image1.jpg" class="d-block w-100" alt="Slide 3">
-                </div>
-            </div>
-
-            <!-- Navigation buttons -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-            <!-- Indicators (dots) -->
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="2"></button>
-        </div>
+    <div class="popup-card" id="popup-expo" role="dialog" aria-modal="true" aria-labelledby="popup-expo-title" tabindex="-1">
+        <div class="popup-content">
+            <button class="close-popup" aria-label="Close">&times;</button>
+            <h2 id="popup-expo-title">Project Expo - Details</h2>
+            <p>
+                The Project Expo will showcase innovative projects by students. Participants can present their prototypes and research from 10:00 am onwards.
+                <br><br>Protocols: 
+                <ul>
+                  <li>Registration by 9:30 am</li>
+                  <li>Prototype setup required by 9:45 am</li>
+                  <li>Judging panel will visit each stall from 10:15 am</li>
+                </ul>
+            </p>
         </div>
     </div>
+
+    <article class="step" data-event="paper">
+        <span>02</span>
+        <h3>Paper Presentation</h3>
+        <p>20/08/2025, Saturday, 1:00 pm.</p>
+        <a href="#" class="btn secondary learn-more">Learn more</a>
+    </article>
+
+    <div class="popup-card" id="popup-paper" role="dialog" aria-modal="true" aria-labelledby="popup-paper-title" tabindex="-1">
+        <div class="popup-content">
+            <button class="close-popup" aria-label="Close">&times;</button>
+            <h2 id="popup-paper-title">Paper Presentation - Details</h2>
+            <p>
+                Participants present their research papers on various topics.
+                <br><br>Protocols:
+                <ul>
+                  <li>Submit abstract by 18/08/2025</li>
+                  <li>Presentation time limit: 15 minutes</li>
+                  <li>Use of multimedia presentations allowed</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+    <article class="step" data-event="poster">
+        <span>03</span>
+        <h3>Poster Presentation</h3>
+        <p>20/08/2025, Saturday, 2:00 pm.</p>
+        <a href="#" class="btn secondary learn-more">Learn more</a>
+    </article>
+
+    <div class="popup-card" id="popup-poster" role="dialog" aria-modal="true" aria-labelledby="popup-poster-title" tabindex="-1">
+        <div class="popup-content">
+            <button class="close-popup" aria-label="Close">&times;</button>
+            <h2 id="popup-poster-title">Poster Presentation - Details</h2>
+            <p>
+                A platform for students to display scientific posters.
+                <br><br>Protocols:
+                <ul>
+                  <li>Poster size max 24"x36"</li>
+                  <li>Posters must be displayed by 1:45 pm</li>
+                  <li>Judging criteria includes creativity and clarity</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+    <article class="step" data-event="quiz">
+    <span>04</span>
+    <h3>Technical Quiz</h3>
+    <p>20/08/2025, Saturday, 4:00 pm.</p>
+    <a href="#" class="btn secondary learn-more">Learn more</a>
+</article>
+
+<div class="popup-card" id="popup-quiz" role="dialog" aria-modal="true" aria-labelledby="popup-quiz-title" tabindex="-1">
+    <div class="popup-content">
+        <button class="close-popup" aria-label="Close">&times;</button>
+        <h2 id="popup-quiz-title">Technical Quiz - Details</h2>
+        <p>
+            Test your knowledge and quick thinking in this exciting quiz competition!
+            <br><br>Protocols:
+            <ul>
+                <li>Teams of 2 participants</li>
+                <li>Registration closes by 19/08/2025</li>
+                <li>Quiz duration: 60 minutes</li>
+                <li>Topics include technology, innovation, and general science</li>
+                <li>Use of electronic devices is not permitted during the quiz</li>
+            </ul>
+        </p>
+    </div>
+</div>
+
+
+</section>
+
+
+
+<section id="gallery">
+  <h1 class="section-title">Gallery</h1>
+  <div class="horizontal-gallery">
+    <img src="28.jpeg" alt="Event 1">
+    <img src="15.jpeg" alt="Event 1">
+    <img src="26.jpeg" alt="Event 2">
+    <img src="27.jpeg" alt="Event 2">
+    <img src="23.jpeg" alt="Event 2">
+    <img src="3.jpeg" alt="Event 2">
+    <img src="19.jpeg" alt="Event 2">
+    <img src="29.jpeg" alt="Event 2">
+    <img src="4.jpeg" alt="Event 2">
+    <img src="11.jpeg" alt="Event 2">
+    <img src="6.jpeg" alt="Event 2">
+    <img src="16.jpeg" alt="Event 2">
+    <img src="17.jpeg" alt="Event 2">
+    <img src="18.jpeg" alt="Event 2">
+    <img src="14.jpeg" alt="Event 2">
+  </div>
+</section>
+
+<!-- Lightbox popup -->
+<div class="lightbox-overlay" id="lightbox">
+  <span class="close-lightbox" id="closeBtn">&times;</span>
+  <img id="lightbox-img" src="" alt="Enlarged view">
+</div>
+
+
 
 
 
@@ -201,7 +282,29 @@
         </section>
 
         <!-- Footer -->
-        <footer class="footer"> &copy; <span>Epistemicon</span> | all rights reserved!</footer>
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-logo">
+      <img src="event_logo1.png" alt="Epistemicon Logo" />
+      <h2>Epistemicon-2K25</h2>
+    </div>
+
+    <div class="footer-social">
+      <a href="https://www.facebook.com/share/1Gdweyrife/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/aliet_cse_connect/?igsh=YmVscXAwdTFtOTZ2#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/@alietcseofficial" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.linkedin.com/posts/aliet-cse-network_epistemicon2k24-aliet-cse-activity-7367381868054237185-Lc7E?utm_source=share&utm_medium=member_android&rcm=ACoAAD12y6EBCLhllJXZ8mEBTnKJCtYcOOeAqZQ" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+
+    <div class="footer-info">
+      <p>&copy; 2025 Epistemicon | All rights reserved</p>
+      <p>Developed by: Jakir, Chaitanya, Ahmad Javed</p>
+      <p><i class="fas fa-map-marker-alt"></i>Andhra Loyola Institute of Engineering & Technology,Vijayawada,Andhra Pradesh India</p>
+    </div>
+
+  </div>
+</footer>
 
         <script>
             // ----------------------------
@@ -251,6 +354,105 @@
             }, 1000);
 
             // document.getElementById("myVideo").defaultPlaybackRate = 2.0;
+
+
+            //cards for showcasing the details of the event..
+            document.addEventListener('DOMContentLoaded', () => {
+            const learnMoreButtons = document.querySelectorAll('.learn-more');
+            const popups = document.querySelectorAll('.popup-card');
+            const closeButtons = document.querySelectorAll('.close-popup');
+
+            learnMoreButtons.forEach(btn => {
+                     btn.addEventListener('click', (e) => {
+                     e.preventDefault();
+                     // Find related popup ID using the previous sibling or data attribute
+                    const step = btn.closest('.step');
+                    const eventName = step.getAttribute('data-event');
+                    const popup = document.getElementById(`popup-${eventName}`);
+                  if(popup) {
+                        popup.classList.add('active');
+                        popup.focus();
+                   }
+                 });
+        });
+
+  closeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.closest('.popup-card').classList.remove('active');
+    });
+  });
+
+  // Close popup when clicking outside content
+  popups.forEach(popup => {
+    popup.addEventListener('click', (e) => {
+      if(e.target === popup) {
+        popup.classList.remove('active');
+      }
+    });
+  });
+
+  // Close popup on ESC key press
+  document.addEventListener('keydown', (e) => {
+    if(e.key === "Escape") {
+      popups.forEach(popup => popup.classList.remove('active'));
+    }
+  });
+});
+
+//for gallery 
+
+  const galleryImages = document.querySelectorAll('.horizontal-gallery img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.getElementById('closeBtn');
+
+  galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('active');
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+    lightboxImg.src = '';
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove('active');
+      lightboxImg.src = '';
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      lightbox.classList.remove('active');
+      lightboxImg.src = '';
+    }
+  });
+  document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("eventVideo");
+
+    if ("IntersectionObserver" in window && video) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            video.play();
+          } else {
+            video.pause();
+          }
+        });
+      }, {
+        threshold: 0.6 // Play when 60% of the video is visible
+      });
+
+      observer.observe(video);
+    }
+  });
+
+
+
         </script>
 
         <!-- Bootstrap JS -->
