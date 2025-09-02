@@ -184,7 +184,7 @@
        COUNTDOWN
        ------------------------------ */
         .countdown-section {
-            width: 80vw;
+            /* width: 80vw; */
             padding: var(--space-5) var(--space-4) var(--space-4)
         }
 
@@ -197,7 +197,7 @@
         .countdown-grid {
             /* width: 80vw; */
             display: flex;
-               gap: 1rem;
+            gap: 1rem;
             /* grid-template-columns: repeat(4, 1fr);
             gap: 10px */
             justify-content: center;
@@ -663,13 +663,13 @@
        FOOTER
        ------------------------------ */
         .footer {
-            width: 95vw;
+            width: 100vw;
             background: var(--color-primary);
             color: #fff;
             text-align: center;
             padding: 16px;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 20px;
+            /* border-top-left-radius: 8px; */
+            /* border-top-right-radius: 20px; */
             font-weight: 600;
         }
 
@@ -898,5 +898,4 @@
        - Conflicting .countdown class (nested); now distinct .countdown-section/.countdown-grid
        - Buggy @media 450px font-size overrides for .logo removed
        - #menu-bar color contrast fixed for light header
-
        ------------------------------ */
