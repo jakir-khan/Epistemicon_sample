@@ -197,6 +197,7 @@
         .countdown-grid {
             /* width: 80vw; */
             display: flex;
+               gap: 1rem;
             /* grid-template-columns: repeat(4, 1fr);
             gap: 10px */
             justify-content: center;
@@ -897,4 +898,5 @@
        - Conflicting .countdown class (nested); now distinct .countdown-section/.countdown-grid
        - Buggy @media 450px font-size overrides for .logo removed
        - #menu-bar color contrast fixed for light header
+
        ------------------------------ */
