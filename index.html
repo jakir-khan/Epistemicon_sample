@@ -7,6 +7,8 @@
   <title>Epistemicon 2025</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- link for AOS Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Icons & Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,8 +53,6 @@
       <a href="#contact" class="btn">Register</a>
     </div>
   </section>
-
-  <!-- video screen -->
 
 
   <!-- Countdown -->
@@ -255,17 +255,79 @@
     <img id="lightbox-img" src="" alt="Enlarged view">
   </div>
 
-
+  <!-- video section -->
   <section id="promo-video" class="container my-5">
-    <h2 class="text-center mb-4">🎬 Epistemicon 2025 – Promo Video</h2>
-    <div class="ratio ratio-16x9">
-      <video id="eventVideo" muted preload="metadata" controls poster="banner-poster.jpg">
-        <source src="epistemicon-2k25.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    <div class="heading">
+      <h2 class="heading">ALIET – Power Moments on Screen⚡</h2>
+    </div>
+    <p class="text-center text-muted mb-4"> Experience the spirit of ALIET — inspiring journeys, empowering voices, and
+      unforgettable moments captured in every frame. 🌟
+    </p>
+
+    <!-- Video Gallery -->
+    <div class="d-flex flex-row flex-nowrap overflow-auto gap-3 pb-3">
+      <!-- Video Card -->
+      <div class="card video-card shadow-sm rounded-3" style="min-width: 250px;">
+        <div class="video-thumb" data-video="epistemicon-2k25.mp4">
+          <img src="17.jpeg" class="card-img-top rounded-top" alt="Promo Video 1">
+          <div class="overlay"><span class="play-icon">▶</span></div>
+        </div>
+        <div class="card-body text-center">
+          <h6 class="card-title">Highlights of Epistemicon-2k24</h6>
+          <button class="btn btn-primary btn-sm video-btn" data-video="epistemicon-2k25.mp4">▶ Click to Watch</button>
+        </div>
+      </div>
+
+      <div class="card video-card shadow-sm rounded-3" style="min-width: 250px;">
+        <div class="video-thumb" data-video="logo video1.mp4">
+          <img src="event_logo1.png" class="card-img-top rounded-top" alt="Aftermovie">
+          <div class="overlay"><span class="play-icon">▶</span></div>
+        </div>
+        <div class="card-body text-center">
+          <h6 class="card-title">Logo Video</h6>
+          <button class="btn btn-primary btn-sm video-btn" data-video="logo video1.mp4">▶ Click to Watch</button>
+        </div>
+      </div>
+
+      <div class="card video-card shadow-sm rounded-3" style="min-width: 250px;">
+        <div class="video-thumb" data-video="version1.mp4">
+          <img src="3v.jpeg" class="card-img-top rounded-top" alt="Teaser">
+          <div class="overlay"><span class="play-icon">▶</span></div>
+        </div>
+        <div class="card-body text-center">
+          <h6 class="card-title">✨ALIET – Empowering Young Minds, Shaping Futures</h6>
+          <button class="btn btn-primary btn-sm video-btn" data-video="version1.mp4">▶ Click to Watch</button>
+        </div>
+      </div>
+      <div class="card video-card shadow-sm rounded-3" style="min-width: 250px;">
+        <div class="video-thumb" data-video="4v.mp4">
+          <img src="p4.jpeg" class="card-img-top rounded-top" alt="Teaser">
+          <div class="overlay"><span class="play-icon">▶</span></div>
+        </div>
+        <div class="card-body text-center">
+          <h6 class="card-title">Faculty Exchange Program</h6>
+          <button class="btn btn-primary btn-sm video-btn" data-video="4v.mp4">▶ Click to Watch</button>
+        </div>
+      </div>
+
     </div>
   </section>
 
+  <!-- Modal -->
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-dark">
+        <div class="modal-body p-0">
+          <video id="modalVideo" controls autoplay class="w-100 rounded">
+            <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- End of video section -->
 
   <!-- Location -->
   <section class="location" id="location">
@@ -407,8 +469,21 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,   // animation speed
+      easing: 'ease-in-out',
+      once: true       // animate only once
+    });
+  </script>
+
+  <!-- Bootstrap Bundle with Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- script for custom js -->
   <script>
 
     const scriptURL = 'https://script.google.com/macros/s/AKfycbyPKEHoC6XNBv71I4a26ZlV5GHSVApCj2w0Oq6sx34ymTTm0iOwJm4aZ6V6ZykHKDultg/exec'
@@ -534,7 +609,7 @@
     closeBtn.addEventListener('click', () => {
       lightbox.classList.remove('active');
       lightboxImg.src = '';
-    });
+    }); 6
 
     lightbox.addEventListener('click', (e) => {
       if (e.target === lightbox) {
@@ -569,13 +644,29 @@
       }
     });
 
+    //video section js
+    const clickableElements = document.querySelectorAll('.video-btn, .video-thumb');
+    const modal = new bootstrap.Modal(document.getElementById('videoModal'));
+    const modalVideo = document.getElementById('modalVideo');
 
+    clickableElements.forEach(el => {
+      el.addEventListener('click', () => {
+        const videoSrc = el.getAttribute('data-video');
+        if (videoSrc) {
+          modalVideo.querySelector('source').src = videoSrc;
+          modalVideo.load();
+          modal.show();
+        }
+      });
+    });
 
+    document.getElementById('videoModal').addEventListener('hidden.bs.modal', () => {
+      modalVideo.pause();
+    });
   </script>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
 
+
+</body>
 
 </html>
