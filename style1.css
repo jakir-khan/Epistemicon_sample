@@ -277,6 +277,12 @@
             }
         }
 
+        /* brochure */
+        .brochure {
+          height: auto;
+          margin-bottom: 2rem;
+        }
+
 
         /* video screen */
 
@@ -651,6 +657,19 @@
             outline: none;
             border-color: var(--color-primary);
             box-shadow: 0 0 0 4px rgba(238, 5, 72, .15)
+        }
+
+        .events {
+          border: 1px solid rgb(128, 126, 126);
+          border-radius: 25px;
+          padding: 2rem;
+          margin-bottom: 2rem;
+        }
+        .events1 label {
+          margin: 5px;
+        }
+        .events1 label, .events input {
+          font-size: 1.4rem;
         }
 
         .contact form select{
