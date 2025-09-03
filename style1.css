@@ -277,6 +277,14 @@
             }
         }
 
+        /* brochure */
+        .brochure {
+          height: auto;
+          margin-bottom: 2rem;
+          display: flex; 
+          justify-content: center;
+        }
+
 
         /* video screen */
 
@@ -335,7 +343,7 @@
             border: none;
         }
 
-        /* Popup card container */
+        /* Popup  container */
 .popup-card {
   position: fixed;
   top: 0;
@@ -503,22 +511,103 @@
   color: #ff4444;
 }
 
+/* video section style */
+/* Mobile – horizontal scroll */
+
+
+.video-thumb {
+  position: relative;
+  cursor: pointer;
+}
+.video-thumb img {
+  transition: 0.3s ease;
+}
+.video-thumb .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.video-thumb .play-icon {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+.video-thumb:hover img {
+  filter: brightness(70%);
+}
+.video-thumb:hover .overlay {
+  opacity: 1;
+}
+/* On mobile: always show overlay */
+@media (max-width: 768px) {
+  .video-thumb .overlay {
+    opacity: 1;
+  }
+}
+
+.video-card {
+  flex: 0 0 auto;
+  width: 250px;
+}
+.video-thumb {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.video-card:hover img {
+  transform: scale(1.05); /* hover zoom */
+}
+
+/* Desktop – grid layout */
+@media (min-width: 992px) {
+  #promo-video .d-flex {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    overflow: visible !important;
+  }
+  .video-card {
+    width: 100%;
+  }
+}
+
+
+
+
+
         /* ------------------------------
        TEAM (Photographer)
        ------------------------------ */
         .team .box-container {
-            display: grid;
+            /* display: grid;
             gap: 14px;
-            padding: 0 var(--space-4) var(--space-4)
+            padding: 0 var(--space-4) var(--space-4) */
+            display: flex;
+            justify-content: center;
+            /* width: 30%; */
         }
 
         .team .box {
+          width: 30%;
             background: #fff;
             color: var(--color-text);
             border-radius: var(--radius);
             padding: 18px;
             text-align: center;
             box-shadow: var(--shadow)
+            
         }
 
         .team .box img {
@@ -646,6 +735,19 @@
             outline: none;
             border-color: var(--color-primary);
             box-shadow: 0 0 0 4px rgba(238, 5, 72, .15)
+        }
+
+        .events {
+          border: 1px solid rgb(128, 126, 126);
+          border-radius: 25px;
+          padding: 2rem;
+          margin-bottom: 2rem;
+        }
+        .events1 label {
+          margin: 5px;
+        }
+        .events1 label, .events input {
+          font-size: 1.4rem;
         }
 
         .contact form select{
@@ -813,6 +915,8 @@
             .inputRow {
                 grid-template-columns: 1fr 1fr
             }
+
+            
         }
 
         @media (min-width:900px) {
@@ -888,6 +992,10 @@
                 width: 100%;
             }
 
+            .team .box {
+              width: 90vw;
+            }
+
 }
 
         /* ------------------------------
@@ -899,3 +1007,4 @@
        - Buggy @media 450px font-size overrides for .logo removed
        - #menu-bar color contrast fixed for light header
        ------------------------------ */
+

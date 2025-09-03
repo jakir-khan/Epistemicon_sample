@@ -4,9 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Epistemicon 2K25</title>
+  <title>Epistemicon 2025</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- link for AOS Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Icons & Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +24,7 @@
   <header>
     <div class="eventLogo">
       <img src="event_logo1.png" alt="Epistemicon logo" />
-      <a href="#home" class="logo">EPISTEMICON – 2K25</a>
+      <a href="#home" class="logo">EPISTEMICON – 2025</a>
 
     </div>
 
@@ -43,7 +45,7 @@
   <!-- Hero -->
   <section id="home" class="home container">
     <div class="content">
-      <video src="logo video1.mp4" autoplay muted loop playsinline poster="banner-poster.jpg" style="border: none;"
+      <video src="https://res.cloudinary.com/dcmt06mac/video/upload/v1756913687/logo_video1_jy0jpx.mp4" autoplay muted loop playsinline poster="banner-poster.jpg" style="border: none;"
         id="myVideo"></video>
       <div class="ticker" aria-label="Event ticker"><span> your stage, your story, your innovation — this is
           Epistemicon! • your stage, your story, your innovation — this is Epistemicon! • </span></div>
@@ -52,12 +54,11 @@
     </div>
   </section>
 
-  <!-- video screen -->
-
 
   <!-- Countdown -->
   <section class="countdown-section container" aria-labelledby="countdown-title">
-    <h1 id="countdown-title">⏳ Countdown to Epistemicon 2K25 🎉</h1>
+    <h1 id="countdown-title">⏳ Countdown to Epistemicon 2025 <span
+        style="color: #EE0548; font-weight: 700; font-size: 2rem;"> (20/09/25) </span>🎉 </h1>
     <div class="countdown-grid" aria-live="polite" aria-atomic="true">
       <div class="time-box">
         <h2 id="days">00</h2>
@@ -86,6 +87,10 @@
         brings together students from diverse colleges to compete, collaborate, and showcase their skills across
         technology, arts, science, and literature.</p>
     </div>
+  </section>
+
+  <section class="brochure">
+    <img src="brochure.jpg" alt="Epistemicon Brochure" class="broch">
   </section>
 
   <!-- Steps -->
@@ -134,7 +139,7 @@
           <br><br>Protocols:
         <ul>
           <li>Submit abstract by 18/09/2025</li>
-          <li>Presentation time limit: 15 minutes</li>
+          <li>Presentation time limit: 8 minutes + 2 minutes for Evaluation.</li>
           <li>Use of multimedia presentations allowed</li>
         </ul>
         </p>
@@ -192,6 +197,33 @@
     </div>
 
 
+    <article class="step" data-event="quiz">
+      <span>05</span>
+      <h3>Spot Events</h3>
+      <p>20/09/2025, Saturday.</p>
+      <a href="#" class="btn secondary learn-more">Learn more</a>
+    </article>
+
+    <div class="popup-card" id="popup-quiz" role="dialog" aria-modal="true" aria-labelledby="popup-quiz-title"
+      tabindex="-1">
+      <div class="popup-content">
+        <button class="close-popup" aria-label="Close">&times;</button>
+        <h2 id="popup-quiz-title">Technical Quiz - Details</h2>
+        <p>
+          Test your knowledge and quick thinking in this exciting quiz competition!
+          <br><br>Protocols:
+        <ul>
+          <li>Teams of 2 participants</li>
+          <li>Registration closes by 19/08/2025</li>
+          <li>Quiz duration: 60 minutes</li>
+          <li>Topics include technology, innovation, and general science</li>
+          <li>Use of electronic devices is not permitted during the quiz</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+
+
   </section>
 
 
@@ -223,17 +255,79 @@
     <img id="lightbox-img" src="" alt="Enlarged view">
   </div>
 
-
+  <!-- video section -->
   <section id="promo-video" class="container my-5">
-    <h2 class="text-center mb-4">🎬 Epistemicon 2K25 – Promo Video</h2>
-    <div class="ratio ratio-16x9">
-      <video id="eventVideo" muted preload="metadata" controls poster="banner-poster.jpg">
-        <source src="epistemicon-2k25.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    <div class="heading">
+      <h2 class="heading">ALIET – Power Moments on Screen⚡</h2>
+    </div>
+    <p class="text-center text-muted mb-4"> Experience the spirit of ALIET — inspiring journeys, empowering voices, and
+      unforgettable moments captured in every frame. 🌟
+    </p>
+
+    <!-- Video Gallery -->
+    <div class="d-flex flex-row flex-nowrap overflow-auto gap-3 pb-3">
+      <!-- Video Card -->
+      <div class="card video-card shadow-sm rounded-3" style="min-width: 250px;" data-aos="fade-up">
+        <div class="video-thumb" data-video="https://res.cloudinary.com/dcmt06mac/video/upload/v1756911137/epistemicon-2k25_doeqgf.mp4">
+          <img src="17.jpeg" class="card-img-top rounded-top" alt="Promo Video 1">
+          <div class="overlay"><span class="play-icon">▶</span></div>
+        </div>
+        <div class="card-body text-center">
+          <h6 class="card-title">Highlights of Epistemicon-2k24</h6>
+          <button class="btn btn-primary btn-sm video-btn" data-video="https://res.cloudinary.com/dcmt06mac/video/upload/v1756911137/epistemicon-2k25_doeqgf.mp4">▶ Click to Watch</button>
+        </div>
+      </div>
+
+      <div class="card video-card shadow-sm rounded-3" style="min-width: 250px;" data-aos="fade-up">
+        <div class="video-thumb" data-video="https://res.cloudinary.com/dcmt06mac/video/upload/v1756913687/logo_video1_jy0jpx.mp4">
+          <img src="event_logo1.png" class="card-img-top rounded-top" alt="Aftermovie">
+          <div class="overlay"><span class="play-icon">▶</span></div>
+        </div>
+        <div class="card-body text-center">
+          <h6 class="card-title">Logo Video</h6>
+          <button class="btn btn-primary btn-sm video-btn" data-video="https://res.cloudinary.com/dcmt06mac/video/upload/v1756913687/logo_video1_jy0jpx.mp4">▶ Click to Watch</button>
+        </div>
+      </div>
+
+      <div class="card video-card shadow-sm rounded-3" style="min-width: 250px;" data-aos="fade-up">
+        <div class="video-thumb" data-video="https://res.cloudinary.com/dcmt06mac/video/upload/v1756910896/version1_yjbrso.mp4">
+          <img src="3v.jpeg" class="card-img-top rounded-top" alt="Teaser">
+          <div class="overlay"><span class="play-icon">▶</span></div>
+        </div>
+        <div class="card-body text-center">
+          <h6 class="card-title">✨ALIET – Empowering Young Minds, Shaping Futures</h6>
+          <button class="btn btn-primary btn-sm video-btn" data-video="https://res.cloudinary.com/dcmt06mac/video/upload/v1756910896/version1_yjbrso.mp4">▶ Click to Watch</button>
+        </div>
+      </div>
+      <div class="card video-card shadow-sm rounded-3" style="min-width: 250px;" data-aos="fade-up">
+        <div class="video-thumb" data-video="https://res.cloudinary.com/dcmt06mac/video/upload/v1756909186/4v_1_tl9jux.mp4">
+          <img src="p4.jpeg" class="card-img-top rounded-top" alt="Teaser">
+          <div class="overlay"><span class="play-icon">▶</span></div>
+        </div>
+        <div class="card-body text-center">
+          <h6 class="card-title">Faculty Exchange Program</h6>
+          <button class="btn btn-primary btn-sm video-btn" data-video="https://res.cloudinary.com/dcmt06mac/video/upload/v1756909186/4v_1_tl9jux.mp4">▶ Click to Watch</button>
+        </div>
+      </div>
+
     </div>
   </section>
 
+  <!-- Modal -->
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-dark">
+        <div class="modal-body p-0">
+          <video id="modalVideo" controls autoplay class="w-100 rounded">
+            <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- End of video section -->
 
   <!-- Location -->
   <section class="location" id="location">
@@ -247,11 +341,41 @@
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="location-details">
-      <p>The event venue is located at:</p>
+      <p>Please refer to the map above for directions and location details:</p>
       <p>GM55+CCQ, ITI Rd, Beside Ramesh Hospital, Jayaprakash Nagar, Vijayawada, Andhra Pradesh 520008</p>
-      <p>Please refer to the map above for directions and location details.</p>
+      <!-- <p>Please refer to the map above for directions and location details.</p> -->
     </div>
   </section>
+
+
+  <section class="team" id="team">
+
+    <div class="heading" style="margin: 1rem;">
+      <h1>Organised by Department of CSE</h1>
+      <img src="" alt="">
+    </div>
+
+    <div class="box-container">
+      <div class="box">
+        <img src="cselogo.jpg" alt="">
+        <h3>CSE Department</h3>
+        <span>ALIET</span>
+
+        <div class="share">
+          <a href="https://www.youtube.com/@alietcseofficial" target="_blank"><i class="fab fa-youtube"></i></a>
+
+          <a href="https://www.instagram.com/aliet_cse_connect/?igsh=YmVscXAwdTFtOTZ2#" target="_blank"><i
+              class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/posts/aliet-cse-network_epistemicon2k24-aliet-cse-activity-7367381868054237185-Lc7E?utm_source=share&utm_medium=member_android&rcm=ACoAAD12y6EBCLhllJXZ8mEBTnKJCtYcOOeAqZQ"
+            target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com/share/1Gdweyrife/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
 
   <!-- Contact -->
   <section class="contact" id="contact">
@@ -261,7 +385,7 @@
     <form action="" method="post" class="contact-form" name="contact-form">
       <div class="inputRow">
         <input type="text" name="Name" placeholder="Your name" autocomplete="name" required>
-        <input type="number" name="Number" placeholder="Your number" autocomplete="tel">
+        <input type="number" name="Number" placeholder="Mobile number" autocomplete="tel">
       </div>
 
       <div class="inputRow">
@@ -271,30 +395,48 @@
 
       <div class="inputRow">
         <select name="Department" id="eventdd">
-          <option value="">--Select Event you want to participate--</option>
+          <option value="">--Select Your Department--</option>
           <option value="CSE">CSE</option>
           <option value="ECE">ECE</option>
           <option value="EEE">EEE</option>
           <option value="CIVIL">CIVIL</option>
-          <option value="MECHANICAL">MECHANICAL</option>
+          <option value="MECH">MECHANICAL</option>
           <option value="CSM">CSM</option>
           <option value="CSD">CSD</option>
         </select>
-      
-        <select name="event" id="eventdd">
+      </div>
+
+        <!-- <select name="event" id="eventdd">
           <option value="Project Expo">--Select Event you want to participate--</option>
           <option value="Project Expo">Project Expo</option>
           <option value="Paper Presentation">Paper Presentation</option>
           <option value="Poster Presentation">Poster Presentation</option>
           <option value="Technical Quiz">Technical Quiz</option>
         </select>
-      </div>
+      </div> -->
 
-      <div class="inputRow">
+        <div class="events">
+          <div class="heading">
+            <h3>Select Events you want to participate</h3>
+          </div>
+          <div class="events1" style="margin-left: 1rem; text-align: left;">
+            <label><input type="checkbox" name="event" value="Project Expo" style="width: auto;"> Project
+              Expo</label><br>
+            <label><input type="checkbox" name="event" value="Paper Presentation" style="width: auto;"> Paper
+              Presentation</label><br>
+            <label><input type="checkbox" name="event" value="Poster Presentation" style="width: auto;"> Poster
+              Presentation</label><br>
+            <label><input type="checkbox" name="event" value="Technical Quiz" style="width: auto;"> Technical
+              Quiz</label><br>
+            <label><input type="checkbox" name="event" value="Spot Events" style="width: auto;"> Spot Events</label><br>
+          </div>
+        </div>
+
+        <!-- <div class="inputRow">
         <input type="text" name="Transaction_ID" placeholder="Your Transaction ID" required>
-      </div>
+      </div> -->
 
-      <button class="btn" type="submit">Register</button>
+        <button class="btn" type="submit">Register</button>
     </form>
   </section>
 
@@ -318,20 +460,34 @@
 
       <div class="footer-info">
         <p>&copy; 2025 Epistemicon | All rights reserved</p>
-        <p>Developed by: Jakir, Chaitanya, Ahmad Javed</p>
-        <p><i class="fas fa-map-marker-alt"></i>Andhra Loyola Institute of Engineering & Technology,Vijayawada,Andhra
-          Pradesh India</p>
+        <p>Developed by: Department of CSE ( AhmadJaved, Jakir, Chaitanya )</p>
+        <p> <a href="http://aliet.ac.in/" target="_blank"> <i class="fas fa-map-marker-alt"></i>Andhra Loyola Institute
+            of Engineering & Technology,Vijayawada,Andhra
+            Pradesh India </a></p>
       </div>
 
     </div>
   </footer>
 
-  <script src="script.js"></script>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,   // animation speed
+      easing: 'ease-in-out',
+      once: true       // animate only once
+    });
+  </script>
+
+  <!-- Bootstrap Bundle with Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- script for custom js -->
   <script>
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyPKEHoC6XNBv71I4a26ZlV5GHSVApCj2w0Oq6sx34ymTTm0iOwJm4aZ6V6ZykHKDultg/exec'
-
+    // const scriptURL = 'https://script.google.com/macros/s/AKfycbyPKEHoC6XNBv71I4a26ZlV5GHSVApCj2w0Oq6sx34ymTTm0iOwJm4aZ6V6ZykHKDultg/exec'
+ const scriptURL = 'https://script.google.com/macros/s/AKfycbyCaDB9etpM6QZ3c6X-noSCIRJOZXlfJv-OY9PtS-rJ21YvxRKyhtZEGUTuLXcUslRu/exec'
     const form = document.forms['contact-form']
 
     form.addEventListener('submit', e => {
@@ -453,7 +609,7 @@
     closeBtn.addEventListener('click', () => {
       lightbox.classList.remove('active');
       lightboxImg.src = '';
-    });
+    }); 6
 
     lightbox.addEventListener('click', (e) => {
       if (e.target === lightbox) {
@@ -488,13 +644,29 @@
       }
     });
 
+    //video section js
+    const clickableElements = document.querySelectorAll('.video-btn, .video-thumb');
+    const modal = new bootstrap.Modal(document.getElementById('videoModal'));
+    const modalVideo = document.getElementById('modalVideo');
 
+    clickableElements.forEach(el => {
+      el.addEventListener('click', () => {
+        const videoSrc = el.getAttribute('data-video');
+        if (videoSrc) {
+          modalVideo.querySelector('source').src = videoSrc;
+          modalVideo.load();
+          modal.show();
+        }
+      });
+    });
 
+    document.getElementById('videoModal').addEventListener('hidden.bs.modal', () => {
+      modalVideo.pause();
+    });
   </script>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
 
+
+</body>
 
 </html>
