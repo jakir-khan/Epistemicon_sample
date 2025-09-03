@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Epistemicon 2K25</title>
+  <title>Epistemicon 2025</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Icons & Font -->
@@ -22,7 +22,7 @@
   <header>
     <div class="eventLogo">
       <img src="event_logo1.png" alt="Epistemicon logo" />
-      <a href="#home" class="logo">EPISTEMICON – 2K25</a>
+      <a href="#home" class="logo">EPISTEMICON – 2025</a>
 
     </div>
 
@@ -57,7 +57,7 @@
 
   <!-- Countdown -->
   <section class="countdown-section container" aria-labelledby="countdown-title">
-    <h1 id="countdown-title">⏳ Countdown to Epistemicon 2K25 <span
+    <h1 id="countdown-title">⏳ Countdown to Epistemicon 2025 <span
         style="color: #EE0548; font-weight: 700; font-size: 2rem;"> (20/09/25) </span>🎉 </h1>
     <div class="countdown-grid" aria-live="polite" aria-atomic="true">
       <div class="time-box">
@@ -87,6 +87,10 @@
         brings together students from diverse colleges to compete, collaborate, and showcase their skills across
         technology, arts, science, and literature.</p>
     </div>
+  </section>
+
+  <section class="brochure" style="display: flex; justify-content: center;">
+    <img src="brochure.jpg" alt="Epistemicon Brochure" class="broch">
   </section>
 
   <!-- Steps -->
@@ -135,7 +139,7 @@
           <br><br>Protocols:
         <ul>
           <li>Submit abstract by 18/09/2025</li>
-          <li>Presentation time limit: 15 minutes</li>
+          <li>Presentation time limit: 8 minutes + 2 minutes for Evaluation.</li>
           <li>Use of multimedia presentations allowed</li>
         </ul>
         </p>
@@ -193,6 +197,33 @@
     </div>
 
 
+    <article class="step" data-event="quiz">
+      <span>05</span>
+      <h3>Spot Events</h3>
+      <p>20/09/2025, Saturday.</p>
+      <a href="#" class="btn secondary learn-more">Learn more</a>
+    </article>
+
+    <div class="popup-card" id="popup-quiz" role="dialog" aria-modal="true" aria-labelledby="popup-quiz-title"
+      tabindex="-1">
+      <div class="popup-content">
+        <button class="close-popup" aria-label="Close">&times;</button>
+        <h2 id="popup-quiz-title">Technical Quiz - Details</h2>
+        <p>
+          Test your knowledge and quick thinking in this exciting quiz competition!
+          <br><br>Protocols:
+        <ul>
+          <li>Teams of 2 participants</li>
+          <li>Registration closes by 19/08/2025</li>
+          <li>Quiz duration: 60 minutes</li>
+          <li>Topics include technology, innovation, and general science</li>
+          <li>Use of electronic devices is not permitted during the quiz</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+
+
   </section>
 
 
@@ -226,7 +257,7 @@
 
 
   <section id="promo-video" class="container my-5">
-    <h2 class="text-center mb-4">🎬 Epistemicon 2K25 – Promo Video</h2>
+    <h2 class="text-center mb-4">🎬 Epistemicon 2025 – Promo Video</h2>
     <div class="ratio ratio-16x9">
       <video id="eventVideo" muted preload="metadata" controls poster="banner-poster.jpg">
         <source src="epistemicon-2k25.mp4" type="video/mp4">
@@ -311,21 +342,39 @@
           <option value="CSM">CSM</option>
           <option value="CSD">CSD</option>
         </select>
+      </div>
 
-        <select name="event" id="eventdd">
+        <!-- <select name="event" id="eventdd">
           <option value="Project Expo">--Select Event you want to participate--</option>
           <option value="Project Expo">Project Expo</option>
           <option value="Paper Presentation">Paper Presentation</option>
           <option value="Poster Presentation">Poster Presentation</option>
           <option value="Technical Quiz">Technical Quiz</option>
         </select>
-      </div>
+      </div> -->
 
-      <div class="inputRow">
+        <div class="events">
+          <div class="heading">
+            <h3>Select Events you want to participate</h3>
+          </div>
+          <div class="events1" style="margin-left: 2rem;   text-align: left;">
+            <label><input type="checkbox" name="event" value="Project Expo" style="width: auto;"> Project
+              Expo</label><br>
+            <label><input type="checkbox" name="event" value="Paper Presentation" style="width: auto;"> Paper
+              Presentation</label><br>
+            <label><input type="checkbox" name="event" value="Poster Presentation" style="width: auto;"> Poster
+              Presentation</label><br>
+            <label><input type="checkbox" name="event" value="Technical Quiz" style="width: auto;"> Technical
+              Quiz</label><br>
+            <label><input type="checkbox" name="event" value="Spot Events" style="width: auto;"> Spot Events</label><br>
+          </div>
+        </div>
+
+        <!-- <div class="inputRow">
         <input type="text" name="Transaction_ID" placeholder="Your Transaction ID" required>
-      </div>
+      </div> -->
 
-      <button class="btn" type="submit">Register</button>
+        <button class="btn" type="submit">Register</button>
     </form>
   </section>
 
@@ -350,8 +399,9 @@
       <div class="footer-info">
         <p>&copy; 2025 Epistemicon | All rights reserved</p>
         <!-- ~  !1111 11                                                                                                                              11  a             <p>Developed by: Jakir, Chaitanya, Ahmad Javed</p> -->
-        <p> <a href="http://aliet.ac.in/" target="_blank"> <i class="fas fa-map-marker-alt"></i>Andhra Loyola Institute of Engineering & Technology,Vijayawada,Andhra
-          Pradesh India </a></p>
+        <p> <a href="http://aliet.ac.in/" target="_blank"> <i class="fas fa-map-marker-alt"></i>Andhra Loyola Institute
+            of Engineering & Technology,Vijayawada,Andhra
+            Pradesh India </a></p>
       </div>
 
     </div>
