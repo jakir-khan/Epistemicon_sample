@@ -281,6 +281,8 @@
         .brochure {
           height: auto;
           margin-bottom: 2rem;
+          display: flex; 
+          justify-content: center;
         }
 
 
@@ -929,3 +931,4 @@
        - Buggy @media 450px font-size overrides for .logo removed
        - #menu-bar color contrast fixed for light header
        ------------------------------ */
+
