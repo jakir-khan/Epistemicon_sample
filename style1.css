@@ -507,18 +507,23 @@
        TEAM (Photographer)
        ------------------------------ */
         .team .box-container {
-            display: grid;
+            /* display: grid;
             gap: 14px;
-            padding: 0 var(--space-4) var(--space-4)
+            padding: 0 var(--space-4) var(--space-4) */
+            display: flex;
+            justify-content: center;
+            /* width: 30%; */
         }
 
         .team .box {
+          width: 30%;
             background: #fff;
             color: var(--color-text);
             border-radius: var(--radius);
             padding: 18px;
             text-align: center;
             box-shadow: var(--shadow)
+            
         }
 
         .team .box img {
@@ -813,6 +818,8 @@
             .inputRow {
                 grid-template-columns: 1fr 1fr
             }
+
+            
         }
 
         @media (min-width:900px) {
@@ -886,6 +893,10 @@
 
     .navbar a {
                 width: 100%;
+            }
+
+            .team .box {
+              width: 90vw;
             }
 
 }
