@@ -451,7 +451,7 @@
 }
 
 .horizontal-gallery img {
-  height: 180px;
+  height: 175px;
        width:auto;
   border-radius: 12px;
   cursor: pointer;
@@ -1008,5 +1008,6 @@
        - Buggy @media 450px font-size overrides for .logo removed
        - #menu-bar color contrast fixed for light header
        ------------------------------ */
+
 
 
