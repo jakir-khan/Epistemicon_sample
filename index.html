@@ -655,6 +655,26 @@
       }
     });
 
+   //video section js
+    const clickableElements = document.querySelectorAll('.video-btn, .video-thumb');
+    const modal = new bootstrap.Modal(document.getElementById('videoModal'));
+    const modalVideo = document.getElementById('modalVideo');
+
+    clickableElements.forEach(el => {
+      el.addEventListener('click', () => {
+        const videoSrc = el.getAttribute('data-video');
+        if (videoSrc) {
+          modalVideo.querySelector('source').src = videoSrc;
+          modalVideo.load();
+          modal.show();
+        }
+      });
+    });
+
+    document.getElementById('videoModal').addEventListener('hidden.bs.modal', () => {
+      modalVideo.pause();
+    });
+
 
 
   </script>
