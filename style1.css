@@ -180,7 +180,8 @@
             margin: 10px 0
         }
 
-       .date {
+
+        .date {
           margin-top: 2 rem;
           display: flex;
           justify-content: center;
@@ -192,12 +193,13 @@
             background: #fff;
             color: #EE0548;
             border-radius: var(--radius);
-            padding: 18px;
+            padding: 1rem;
             font-weight: 700;
-            font-size: 2.2rem;
+            font-size: 2.0rem;
             text-align: center;
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow)
         }
+
 
         /* ------------------------------
        COUNTDOWN
@@ -475,7 +477,7 @@
 
 .horizontal-gallery img {
   height: 175px;
-       width:auto;
+  width: auto;
   border-radius: 12px;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1031,9 +1033,4 @@
        - Buggy @media 450px font-size overrides for .logo removed
        - #menu-bar color contrast fixed for light header
        ------------------------------ */
-
-
-
-
-
 
