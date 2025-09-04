@@ -180,6 +180,25 @@
             margin: 10px 0
         }
 
+       .date {
+          margin-top: 2 rem;
+          display: flex;
+          justify-content: center;
+        }
+
+        .date .box {
+          
+          width: auto;
+            background: #fff;
+            color: #EE0548;
+            border-radius: var(--radius);
+            padding: 18px;
+            font-weight: 700;
+            font-size: 2.2rem;
+            text-align: center;
+            box-shadow: var(--shadow)
+        }
+
         /* ------------------------------
        COUNTDOWN
        ------------------------------ */
@@ -1008,6 +1027,7 @@
        - Buggy @media 450px font-size overrides for .logo removed
        - #menu-bar color contrast fixed for light header
        ------------------------------ */
+
 
 
 
