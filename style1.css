@@ -400,6 +400,10 @@
   animation: popupSlideIn 0.4s forwards;
 }
 
+.popup-content ul {
+  text-align: left;
+}
+
 /* Slide in animation */
 @keyframes popupSlideIn {
   from {
@@ -1027,6 +1031,7 @@
        - Buggy @media 450px font-size overrides for .logo removed
        - #menu-bar color contrast fixed for light header
        ------------------------------ */
+
 
 
 
